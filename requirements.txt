@@ -1,0 +1,12 @@
+yfinance
+pandas
+matplotlib
+scikit-learn
+numpy
+joblib
+prophet
+xgboost
+flask
+gunicorn
+nltk
+requests
