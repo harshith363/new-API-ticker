@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from prophet import Prophet
 from flask import Flask, jsonify, request, send_file
+from flask_cors import CORS
 from datetime import timedelta
 import requests
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
@@ -18,6 +19,7 @@ matplotlib.use('Agg')  # Use a non-GUI backend
 nltk.download('vader_lexicon')
 
 app = Flask(__name__)
+CORS(app)
 
 def fetch_data(ticker, start_date='2024-01-01', end_date='2025-04-02'):
     """Fetch historical stock data."""
